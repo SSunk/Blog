@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}首页{% endblock %}
+{% block head %}{% endblock %}
+{% block index %}layui-this{% endblock %}
+{% block content %}
+    <div class="container">
+
+						<h4 class="item-title">
+                            <p><i class="layui-icon layui-icon-speaker"></i>公告：<span>欢迎来到我的小小小博客</span></p>
+						</h4>
+                        {% for bk in blog %}
+						<div class="item" >
+							<div class="item-box  layer-photos-demo1 layer-photos-demo">
+								<h3><a href="{{ url_for('detail',id = bk.id) }}">{{ bk.biaoti }}</a></h3>
+								<h5>发布于：<span>{{ bk.create_time }}</span></h5>
+								<p>{{ bk.syzs|safe}}......</p>
+								<img src="{{ bk.fmdz }}" width="199" height="130" alt="">
+							</div>
+
+						</div>
+                        {% endfor %}
+    </div>
+
+
+
+{% endblock %}

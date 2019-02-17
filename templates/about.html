@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}关于{% endblock %}
+{% block head %}{% endblock %}
+{% block about %}layui-this{% endblock %}
+{% block content %}
+			<div class="container container-message container-details container-about">
+					<div class="contar-wrap">
+						<div class="item">
+							<div class="item-box">
+								<h3>关于作者</h3>
+                                <img src="{{ url_for('static',filename = 'images/tx.jpg')}}" width="250" height="250" alt="">
+                                <p></p>
+								<p>大学三年级在读</p>
+								<p>专业：计算机科学与技术</p>
+								<p>擅长领域：精通Java、Python、C语言、数据结构、PhotoShop；熟悉Linux、Mysql数据库、scrapy爬虫技术、Flask Web后端开发等；熟练使用Python第三方库。</p>
+								<p>此网站前端技术参照Layui，后端独立使用Flask框架完成；使用 Nginx + uWsgi + Flask 部署于腾讯云。</p>
+								<p>QQ：1061928777</p>
+								<p>微信(Wechat):</p>
+                                 <img src="{{ url_for('static',filename = 'images/wx.jpg')}}" width="500" height="600" alt="">
+								<div class="count layui-clear">
+									<span class="pull-left">阅读 <em>100000+</em></span>
+									<span class="pull-right like"><i class="layui-icon layui-icon-praise"></i><em>999</em></span>
+								</div>
+							</div>
+						</div>
+					</div>
+			</div>
+	{% endblock %}

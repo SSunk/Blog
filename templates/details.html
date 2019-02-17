@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}登录{% endblock %}
+{% block head %}<link rel="stylesheet" href="{{ url_for('static',filename='css/res.css') }}">{% endblock %}
+{% block login %}layui-this{% endblock %}
+{% block content %}
+<div class="container container-message container-details">
+					<div class="contar-wrap">
+						<div class="item">
+							<div class="item-box  layer-photos-demo1 layer-photos-demo">
+								<h3><a href="#">{{ ques.biaoti }}</a></h3>
+								<h5>发布于：<span>{{ ques.create_time }}</span></h5>
+								<p>{{ ques.neirong|safe }}</p>
+								<img src="{{ ques.nrdz }}" alt="">
+								<div class="count layui-clear">
+									<span class="pull-left">阅读 <em>100000+</em></span>
+									<span class="pull-right like"><i class="layui-icon layui-icon-praise"></i><em>999</em></span>
+								</div>
+							</div>
+						</div>
+                    </div>
+</div>
+
+
+{% endblock %}

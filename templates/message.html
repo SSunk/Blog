@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}留言{% endblock %}
+{% block head %}{% endblock %}
+{% block message %}layui-this{% endblock %}
+{% block content %}
+			<div class="container container-message">
+				<div class="contar-wrap" id="contar-wrap">
+					<form class="layui-form" action="" method="post">
+						<div class="layui-form-item layui-form-text">
+							  <textarea  class="layui-textarea" name="liuyan" id="LAY-msg-content" style="resize:none"></textarea>
+						</div>
+
+               <div class="item-btn">
+						<button class="layui-btn layui-btn-normal" id="item-btn">提交</button>
+					</div>
+                    </form>
+
+					
+					<div id="LAY-msg-box">
+						<div class="info-box">
+                         {% for ly in liuyan %}
+							<div class="info-item">
+								<img class="info-img" src="{{ url_for('static',filename = 'images/info-img.png')}}" alt="">
+								<div class="info-text">
+
+									<p class="title count">
+										<span class="name">{{ ly.name }}</span>
+										<span class="info-img like"><i class="layui-icon layui-icon-praise"></i>{{ ly.create_time }}</span>
+									</p>
+									<p class="info-intr">{{ ly.content }}</p>
+
+								</div>
+							</div>
+                            {% endfor %}
+
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+	{% endblock %}

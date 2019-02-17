@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block title %}登录{% endblock %}
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/res.css') }}">
+    <script src="{{ url_for('static', filename='ckeditor/ckeditor.js') }}"></script>
+    <script src="https://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+    $(document).ready(function(){
+         var a = $("#l").text();
+        $("#l").html(a)
+    });
+    </script>
+
+{% endblock %}
+{% block login %}layui-this{% endblock %}
+{% block content %}
+  <div class="container container-message">
+				<div class="contar-wrap" id="contar-wrap">
+					<form class="layui-form" action="" method="post">
+                        <div class="layui-input-block">
+                            <input type="text" name="biaoti" lay-verify="title" autocomplete="off" placeholder="请输入标题" class="layui-input">
+                        </div>
+                        <div class="layui-input-block">
+                            <input type="text" name="fmdz" lay-verify="title" autocomplete="off" placeholder="请输入封面" class="layui-input">
+                        </div>
+                        <div class="layui-input-block">
+                            <input type="text" name="bkdz" lay-verify="title" autocomplete="off" placeholder="请输入" class="layui-input">
+                        </div>
+						<div class="layui-form-item layui-form-text">
+							  <textarea   name="boke"  rows="20" class="ckeditor"></textarea>
+						</div>
+
+               <div class="item-btn">
+						<button class="layui-btn layui-btn-normal" id="item-btn">提交</button>
+					</div>
+                    </form>
+                </div>
+  </div>
+
+
+{% endblock %}

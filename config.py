@@ -1,0 +1,13 @@
+import os
+
+
+DEBUG = True
+SECRET_KEY = os.urandom(24)
+HOSTNAME='120.0.0.1'
+PORT='3306'
+USERNAME="root"
+PASSWORD=""
+DATABASE='blog'
+DB_URL = 'mysql+pymysql://{}:{}@{}:{}/{}?charset=utf8'.format(USERNAME,PASSWORD,HOSTNAME,PORT,DATABASE)
+SQLALCHEMY_DATABASE_URI = DB_URL
+SQLALCHEMY_TRACK_MODIFICATIONS = True
